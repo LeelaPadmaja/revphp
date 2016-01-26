@@ -9,7 +9,7 @@ redis = Redis(host='redis', port=6379)
 @app.route('/')
 def hello():
     redis.incr('hits')
-    return 'Hello World! I have been seen %s times.' % redis.get('hits')
+    return 'Hello Cloudmunch! I have been seen %s times.' % redis.get('hits')
 
 
 if __name__ == "__main__":
